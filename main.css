@@ -8,7 +8,7 @@ html {
     font-size: 1.3em;
     line-height: 1.4em;
     margin: 0;
-    text-align: center;
+    text-align: left;
 }
 
 body {
@@ -41,10 +41,12 @@ main {
 #main_title {
     font-weight: 900;
     color: white;
+    margin-left: 1.5em;
 }
 
 #home_title {
     font-size: 1.7em;
+    margin-left: 1.5em;
 }
 
 .main_nav {
@@ -53,7 +55,7 @@ main {
 
 .main_nav ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
@@ -63,8 +65,7 @@ main {
 }
 
 .main_nav li {
-    flex: auto;
-    padding: 5px;
+    padding: 10px;
     border-bottom: 2px solid black;
 }
 
@@ -89,6 +90,11 @@ a {
     color: green;
     text-decoration: none;
 }
+.text_and_table{
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .hours_and_payment {
     min-height:100%;
@@ -98,26 +104,25 @@ a {
     padding: 0;
     margin: 0;
 }
-.hours_and_payment > span { 
+.hours_and_payment > div { 
     flex-basis: calc(50%);
 }
-.hours_and_payment > span > span {
+.hours_and_payment > div > div {
     flex-direction: row;
 }
 
 .hours_and_payment p{
-    text-align: left;
     font-size: 0.9em;
 }
 
-span > ul,
-span > h2,
-span > ul > li > p {
+div > ul,
+div > h2,
+div > ul > li > p {
     margin: 0px;
     list-style-type: circle;
 }
 
-span > h2 {
+.top_row > h2 {
     padding: 8px;
 }
 
@@ -128,6 +133,7 @@ span > h2 {
 
 .bottom_row {
     background: #3a6f56;
+    color: white;
     box-sizing: border-box;
     border-bottom: 2px solid black;
 }
@@ -164,9 +170,16 @@ span > h2 {
     color: white;
 }
 
+.footer_content {
+    margin-left: 10%;
+}
+.footer_content > h2 {
+    padding: 8px;
+    padding-left: 0;
+}
+
 .social_footer {
     display: flex;
-    justify-content: center;
     margin: 0;
     padding: 0;
     flex-wrap: wrap;
@@ -175,10 +188,31 @@ span > h2 {
 
 footer {
     background-color: black;
-    height: 11.6em;
+    height: 11.2em;
     color: white;
     font-weight: 100;
     font-size: 0.7em;
     line-height: 0.5em;
-    padding: 4px;
+    padding: 10px;
+}
+
+@media only screen 
+and (max-width: 555px){
+    #main_title {
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #home_title{
+        width: 90vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .text_pictures{
+        width:90vw;
+    }
+    .text_and_table{
+        width: 90vw;
+    }
+
 }
